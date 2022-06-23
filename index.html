@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustache Carros</title>
+    <script
+      data-require="mustache.js@0.7.2"
+      data-semver="0.7.2"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.js"
+    ></script>
+    <script
+      data-require="jquery@2.2.0"
+      data-semver="2.2.0"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"
+    ></script>
+    <link
+      data-require="bootstrap-css@3.3.6"
+      data-semver="3.3.6"
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"
+    />
+  </head>
+
+  <body>
+    <h1>Mustache Carros</h1>
+    <table id="mytable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+    </table>
+
+    <!-- Template -->
+    <script id="item-template" type="text/template">
+      {{#itens}}
+        <tr>
+          <td>
+            {{ nome }}
+          </td>
+          <td>
+            {{ valor }}
+          </td>
+      </tr>
+      {{/itens}}
+    </script>
+    <!-- End Template -->
+    <script src="script.js"></script>
+  </body>
+</html>
