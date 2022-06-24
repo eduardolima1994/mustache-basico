@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustache Carros</title>
+    <title>Listagem de Carros com Mustache</title>
     <script
       data-require="mustache.js@0.7.2"
       data-semver="0.7.2"
@@ -24,25 +24,25 @@
   </head>
 
   <body>
-    <h1>Mustache Carros</h1>
+    <h1>Listagem de Carros com Mustache</h1>
     <table id="mytable" class="table table-bordered">
       <thead>
         <tr>
+          <th>Código</th>
           <th>Nome</th>
-          <th>Valor</th>
         </tr>
       </thead>
     </table>
 
     <!-- Template -->
-    <script id="item-template" type="text/template">
+    <script id="itemtemplate" type="text/template">
       {{#itens}}
         <tr>
           <td>
-            {{ nome }}
+            {{ codigo }}
           </td>
           <td>
-            {{ valor }}
+            {{ nome }}
           </td>
       </tr>
       {{/itens}}
